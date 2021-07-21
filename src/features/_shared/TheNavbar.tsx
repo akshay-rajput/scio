@@ -1,10 +1,11 @@
 import React from 'react'
 import {NavLink, Link} from "react-router-dom";
-import {RootStateOrAny, useDispatch, useSelector} from "react-redux";
+import {useDispatch} from "react-redux";
 import {LOGOUT} from '../authentication/authenticationSlice';
 import {AiOutlineHome,AiOutlineBarChart, AiOutlineUser, AiOutlineLogout} from 'react-icons/ai';
 import {GiUbisoftSun} from 'react-icons/gi';
 import styled from 'styled-components';
+import { resetUserResults } from '../user/userSlice';
 
 const AppNav = styled.nav`
     a{
@@ -40,7 +41,7 @@ const AppNav = styled.nav`
 `;
 
 export default function TheNavbar() {
-    const authState = useSelector((state: RootStateOrAny) => state.authentication);
+    // const authState = useSelector((state: RootStateOrAny) => state.authentication);
     const dispatch = useDispatch();
 
     // logout
@@ -48,6 +49,7 @@ export default function TheNavbar() {
         console.log('loggin out');
         // dispatch logout
         await dispatch(LOGOUT());
+        dispatch(resetUserResults({}));
     }
 
     return (
@@ -72,7 +74,7 @@ export default function TheNavbar() {
                     </li>
 
                     <li>
-                        <NavLink to={"/profile/"+authState.userId} className="displayFlex itemsCenter" title="View Profile">
+                        <NavLink to={"/profile"} className="displayFlex itemsCenter" title="View Profile">
                             <AiOutlineUser />
                         </NavLink>
                     </li>
