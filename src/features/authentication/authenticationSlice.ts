@@ -1,5 +1,9 @@
 import { createSlice } from '@reduxjs/toolkit';
 
+// const localToken = localStorage.getItem('token') ? localStorage.getItem('token') : ""; 
+// const localName = localStorage.getItem('name') ? localStorage.getItem('name') : ""; 
+// const localUserId = localStorage.getItem('userId') ? localStorage.getItem('userId') : ""; 
+// const localAvatar = localStorage.getItem('userAvatar') ? localStorage.getItem('userAvatar') : ""; 
 const localToken = JSON.parse(String(localStorage.getItem('token')) || "");
 const localName = JSON.parse(String(localStorage.getItem('name')) || "");
 const localUserId = JSON.parse(String(localStorage.getItem('userId')) || "");
@@ -26,10 +30,11 @@ export const authenticationSlice = createSlice({
         },
         LOGOUT: state => {
             // console.log('logoutAction..')
-            localStorage.setItem('userId', "");
-            localStorage.setItem('name', "");
-            localStorage.setItem('token', "");
-            localStorage.setItem('userAvatar', "");
+            localStorage.clear();
+            // localStorage.setItem('userId', "");
+            // localStorage.setItem('name', "");
+            // localStorage.setItem('token', "");
+            // localStorage.setItem('userAvatar', "");
 
             // reset
             state.userId = "";
