@@ -1,1 +1,153 @@
+.App {
+    font-family: "Fira Sans", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
+        "Droid Sans", "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 
+    background: var(--light);
+    color: var(--dark);
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+nav{
+	background: var(--dark);
+	color: var(--light);
+}
+main {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    margin-top: 1rem !important;
+    margin-bottom: 1rem !important;
+}
+
+.app-navbar-logo {
+    font-family: "Signika", serif;
+    font-size: 1.5rem;
+    color: var(--primary);
+    transition: color ease 0.35s;
+    position: sticky;
+}
+.app-navbar-logo:hover {
+    color: var(--accent);
+    text-decoration: none;
+}
+.app-container {
+    width: 95%;
+    max-width: 1024px;
+    margin: auto;
+}
+
+.app-logo,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Signika", serif;
+    font-weight: 600;
+}
+
+/* links */
+a {
+    color: var(--primary);
+    transition: color ease 0.35s;
+}
+a:hover {
+    color: var(--accent);
+    text-decoration: underline;
+}
+a.link-button:hover {
+    text-decoration: none;
+}
+
+::-webkit-scrollbar {
+    width: 0.5rem;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px var(--light);
+    border-radius: var(--border-radius);
+    /* border: 1px solid var(--secondary); */
+    cursor: pointer;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: var(--border-radius);
+    background-color: var(--primary);
+    cursor: pointer;
+}
+
+/* inputs */
+input,
+textarea {
+    border-radius: 0.5rem;
+    border: 1px solid #ccc;
+    padding: 0.5rem;
+    color: var(--dark);
+}
+input:focus,
+textarea:focus,
+select:focus {
+    outline-color: var(--gray-light);
+}
+
+/* buttons */
+
+button.btn-primary, button.btn-outline{
+	padding: 0.5rem 1rem;
+	border-radius: 0.25rem;
+	transition: all ease 0.35s;
+}
+.btn-primary {
+    background-color: var(--primary);
+    border: 1px solid var(--primary);
+    color: white;
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: var(--primary);
+    border: 1px solid var(--primary);
+}
+button:disabled {
+    background: var(--gray-light) !important;
+    color: #555 !important;
+    border-color: #ccc !important;
+}
+
+.btn-outline:hover, .btn-primary:hover {
+    background-color: var(--primary-dark);
+    color: var(--light);
+    border: 1px solid var(--primary);
+}
+
+
+/* gradients */
+.orange-gradient {
+	background-image: radial-gradient(circle at 88% 44%, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.03) 8%,transparent 8%, transparent 92%),radial-gradient(circle at 46% 95%, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.03) 8%,transparent 8%, transparent 92%),radial-gradient(circle at 83% 91%, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.03) 6%,transparent 6%, transparent 94%),radial-gradient(circle at 24% 95%, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.03) 6%,transparent 6%, transparent 94%),radial-gradient(circle at 42% 85%, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.03) 6%,transparent 6%, transparent 94%),radial-gradient(circle at 61% 40%, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.03) 6%,transparent 6%, transparent 94%),radial-gradient(circle at 27% 33%, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.03) 4%,transparent 4%, transparent 96%),radial-gradient(circle at 30% 12%, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.03) 4%,transparent 4%, transparent 96%),radial-gradient(circle at 99% 87%, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.03) 4%,transparent 4%, transparent 96%),radial-gradient(circle at 84% 63%, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.03) 4%,transparent 4%, transparent 96%),linear-gradient(45deg, rgb(200, 21, 78),rgb(191, 186, 10));
+}
+
+.blue-gradient{
+	background-image: radial-gradient(circle at 48% 33%, rgba(255,255,255,0.04) 0%, rgba(255,255,255,0.04) 8%,transparent 8%, transparent 92%),radial-gradient(circle at 28% 16%, rgba(255,255,255,0.04) 0%, rgba(255,255,255,0.04) 8%,transparent 8%, transparent 92%),radial-gradient(circle at 34% 52%, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.03) 6%,transparent 6%, transparent 94%),radial-gradient(circle at 92% 52%, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.03) 6%,transparent 6%, transparent 94%),radial-gradient(circle at 77% 84%, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.03) 6%,transparent 6%, transparent 94%),radial-gradient(circle at 75% 64%, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.03) 6%,transparent 6%, transparent 94%),radial-gradient(circle at 70% 62%, rgba(255,255,255,0.04) 0%, rgba(255,255,255,0.04) 4%,transparent 4%, transparent 96%),radial-gradient(circle at 55% 100%, rgba(255,255,255,0.04) 0%, rgba(255,255,255,0.04) 4%,transparent 4%, transparent 96%),radial-gradient(circle at 12% 11%, rgba(255,255,255,0.04) 0%, rgba(255,255,255,0.04) 4%,transparent 4%, transparent 96%),radial-gradient(circle at 35% 55%, rgba(255,255,255,0.04) 0%, rgba(255,255,255,0.04) 4%,transparent 4%, transparent 96%),linear-gradient(45deg, rgb(26, 21, 192),rgb(171, 83, 239));
+}
+
+.teal-gradient{
+	background-image: radial-gradient(circle at 17% 30%, rgba(0,0,0,0.02) 0%, rgba(0,0,0,0.02) 3%,transparent 3%, transparent 100%),radial-gradient(circle at 1% 27%, rgba(0,0,0,0.02) 0%, rgba(0,0,0,0.02) 3%,transparent 3%, transparent 100%),radial-gradient(circle at 5% 63%, rgba(0,0,0,0.02) 0%, rgba(0,0,0,0.02) 3%,transparent 3%, transparent 100%),radial-gradient(circle at 13% 61%, rgba(0,0,0,0.03) 0%, rgba(0,0,0,0.03) 7%,transparent 7%, transparent 100%),radial-gradient(circle at 46% 46%, rgba(0,0,0,0.02) 0%, rgba(0,0,0,0.02) 7%,transparent 7%, transparent 100%),radial-gradient(circle at 95% 98%, rgba(0,0,0,0.03) 0%, rgba(0,0,0,0.03) 7%,transparent 7%, transparent 100%),radial-gradient(circle at 12% 9%, rgba(0,0,0,0.01) 0%, rgba(0,0,0,0.01) 5%,transparent 5%, transparent 100%),radial-gradient(circle at 95% 66%, rgba(0,0,0,0.01) 0%, rgba(0,0,0,0.01) 5%,transparent 5%, transparent 100%),radial-gradient(circle at 61% 21%, rgba(0,0,0,0.01) 0%, rgba(0,0,0,0.01) 5%,transparent 5%, transparent 100%),linear-gradient(45deg, rgb(107, 130, 250),rgb(42, 197, 128));
+}
+
+/* animation */
+.loading-icon{
+    animation: rotating 2s linear infinite;
+}
+@keyframes rotating {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
