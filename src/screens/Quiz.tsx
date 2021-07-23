@@ -77,7 +77,7 @@ export default function Quiz(){
                 {
                     quizResult.length < activeQuiz.questions?.length &&
                     <h4 className="">
-                        00 : <QuizTimer updateQuestion={updateQuestion} key={currentQuestionIndex} seconds={60} />
+                        00 : <QuizTimer updateQuestion={updateQuestion} currentQuestion={activeQuiz.questions[currentQuestionIndex]} key={currentQuestionIndex} seconds={25} />
                     </h4>
                 }
             </div>
