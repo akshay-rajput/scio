@@ -62,19 +62,19 @@ export default function TheNavbar() {
 
                 <ul className=" displayFlex listNoStyle gridGap4 itemsCenter">
                     <li>
-                        <NavLink to="/" className="displayFlex itemsCenter" title="Home">
+                        <NavLink end to="/" className="displayFlex itemsCenter" title="Home">
                             <AiOutlineHome />
                         </NavLink>
                     </li>
 
                     <li>
-                        <NavLink to="/leaderboard" className="displayFlex itemsCenter" title="View Leaderboard">
+                        <NavLink end to="/leaderboard" className="displayFlex itemsCenter" title="View Leaderboard">
                             <AiOutlineBarChart />
                         </NavLink>
                     </li>
 
                     <li>
-                        <NavLink to={"/profile"} className="displayFlex itemsCenter" title="View Profile">
+                        <NavLink end to={"/profile"} className="displayFlex itemsCenter" title="View Profile">
                             <AiOutlineUser />
                         </NavLink>
                     </li>
